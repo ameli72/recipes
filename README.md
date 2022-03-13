@@ -1,2 +1,2 @@
-# recipes
+# Recipes
 App to search recipes
