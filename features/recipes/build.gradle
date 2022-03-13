@@ -1,17 +1,40 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 dependencies {
+    implementation project(':libraries:model')
+    implementation project(':libraries:repository')
+
+    // Android
     implementation Deps.androidx_appCompat
     implementation Deps.androidx_core
     implementation Deps.androidx_constraintLayout
     implementation Deps.materialDesign
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
+    // Lifecycle
+    implementation Deps.androidx_lifecycle_livedata
+    implementation Deps.androidx_lifecycle_runtime
+    implementation Deps.androidx_lifecycle_viewmodel
+
+    // Dagger Hilt
+    implementation Deps.dagger
+    implementation Deps.legacy_support
+    kapt Deps.dagger_compiler
+
+    // Hilt
+    implementation Deps.hilt_android
+    kapt Deps.hilt_android_compiler
+    kapt Deps.androidx_hilt_compiler
+
+    // Coroutines
+    implementation Deps.coroutine_version_core
+    implementation Deps.coroutine_version_android
+
+    // Testing
     testImplementation Deps.junit
     androidTestImplementation Deps.androidx_test_junit
     androidTestImplementation Deps.androidx_test_espresso

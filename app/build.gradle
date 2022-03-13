@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -47,24 +48,39 @@ dependencies {
     implementation project(':libraries:uicomponents')
 
 
-    // android
+    // Android
     implementation Deps.androidx_appCompat
     implementation Deps.androidx_core
     implementation Deps.androidx_constraintLayout
     implementation Deps.materialDesign
 
-    // dagger hilt
+    // Lifecycle
+    implementation Deps.androidx_lifecycle_livedata
+    implementation Deps.androidx_lifecycle_runtime
+    implementation Deps.androidx_lifecycle_viewmodel
+
+    // Dagger Hilt
     implementation Deps.dagger
     implementation Deps.legacy_support
     kapt Deps.dagger_compiler
 
-    // hilt
+    // Hilt
     implementation Deps.hilt_android
     kapt Deps.hilt_android_compiler
     kapt Deps.androidx_hilt_compiler
 
+    // Retrofit with rxjava
+    implementation Deps.retrofit
+    implementation Deps.retrofit_converter_gson
+    implementation Deps.retrofit2_rxjava2_adapter
+    implementation Deps.rxjava2
+    implementation Deps.rxjava2_rxandroid
 
-    // testing
+    // Coroutines
+    implementation Deps.coroutine_version_core
+    implementation Deps.coroutine_version_android
+
+    // Testing
     testImplementation Deps.junit
     androidTestImplementation Deps.androidx_test_junit
     androidTestImplementation Deps.androidx_test_espresso
