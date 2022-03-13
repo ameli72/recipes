@@ -14,3 +14,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Recipes"
 include ':app'
+include ':features:recipes'
+include ':libraries:actions'
+include ':libraries:model'
+include ':libraries:repository'
+include ':libraries:uicomponents'
