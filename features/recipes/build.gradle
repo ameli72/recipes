@@ -8,6 +8,9 @@ dependencies {
     implementation Deps.androidx_core
     implementation Deps.androidx_constraintLayout
     implementation Deps.materialDesign
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     testImplementation Deps.junit
     androidTestImplementation Deps.androidx_test_junit
