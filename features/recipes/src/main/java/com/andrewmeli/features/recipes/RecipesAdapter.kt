@@ -40,6 +40,7 @@ class RecipesAdapter : BaseListAdapter<Recipe, RecipesAdapter.ViewHolder>() {
                     .into(imageView)
 
                 textViewName.text = recipe.label
+                textViewCuisineType.text = recipe.cuisineType?.joinToString { it.label ?: "" }
 
                 container.onSingleClickListener {
                     onViewClickListeners.invoke(it.id, recipe)

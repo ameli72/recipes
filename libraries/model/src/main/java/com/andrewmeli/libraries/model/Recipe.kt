@@ -30,8 +30,8 @@ data class Recipe(
     var totalCO2Emissions: Float?,
     var co2EmissionsClass: String?,
     var totalWeight: Float?,
+    var cuisineType: List<CuisineType>?,
 
-//cuisineType (Array[string], optional),
 //mealType (Array[string], optional),
 //dishType (Array[string], optional),
 //totalNutrients (NutrientsInfo, optional),

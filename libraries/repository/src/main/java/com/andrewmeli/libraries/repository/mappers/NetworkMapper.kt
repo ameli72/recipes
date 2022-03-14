@@ -1,5 +1,6 @@
 package com.andrewmeli.libraries.repository.mappers
 
+import com.andrewmeli.libraries.model.CuisineType
 import com.andrewmeli.libraries.model.Ingredient
 import com.andrewmeli.libraries.model.Recipe
 import com.andrewmeli.libraries.repository.network.responses.RecipeDTO
@@ -35,8 +36,8 @@ constructor() : IModelMapper<RecipeDTO, Recipe> {
             totalCO2Emissions = dto.totalCO2Emissions,
             co2EmissionsClass = dto.co2EmissionsClass,
             totalWeight = dto.totalWeight,
+            cuisineType = dto.cuisineType?.map { CuisineType(it) },
 
-//            cuisineType (Array[string], optional),
 //            mealType (Array[string], optional),
 //            dishType (Array[string], optional),
 //            totalNutrients (NutrientsInfo, optional),
@@ -71,8 +72,8 @@ constructor() : IModelMapper<RecipeDTO, Recipe> {
             totalCO2Emissions = model.totalCO2Emissions,
             co2EmissionsClass = model.co2EmissionsClass,
             totalWeight = model.totalWeight,
+            cuisineType = model.cuisineType?.map { it.label ?: "" },
 
-//            cuisineType (Array[string], optional),
 //            mealType (Array[string], optional),
 //            dishType (Array[string], optional),
 //            totalNutrients (NutrientsInfo, optional),

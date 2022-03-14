@@ -65,7 +65,10 @@ data class RecipeDTO(
     @Expose
     var totalWeight: Float?,
 
-//cuisineType (Array[string], optional),
+    @SerializedName("cuisineType")
+    @Expose
+    var cuisineType: List<String>?,
+
 //mealType (Array[string], optional),
 //dishType (Array[string], optional),
 //totalNutrients (NutrientsInfo, optional),
