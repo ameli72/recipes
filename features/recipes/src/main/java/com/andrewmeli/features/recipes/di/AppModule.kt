@@ -13,7 +13,7 @@ import dagger.hilt.components.SingletonComponent
 object AppModule {
 
     @Provides
-    fun provideGithubViewModel(
+    fun provideRecipesViewModel(
         repository: IRepository
     ): IRecipesViewModel = RecipesViewModel(repository)
 }

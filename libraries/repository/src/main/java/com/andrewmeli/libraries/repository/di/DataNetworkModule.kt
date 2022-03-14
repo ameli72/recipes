@@ -31,7 +31,7 @@ object DataNetworkModule {
 
     @Singleton
     @Provides
-    fun provideGithubService(retrofit: Retrofit.Builder): IEdamamAPI = retrofit
+    fun provideEdamamService(retrofit: Retrofit.Builder): IEdamamAPI = retrofit
         .build()
         .create(IEdamamAPI::class.java)
 }

@@ -60,8 +60,9 @@ class RecipesFragment @Inject constructor() : BaseFragment() {
                     viewModel.getRecipes(searchView.query.toString())
                     return false
                 }
-                override fun onQueryTextChange(p0: String?): Boolean {
-                    viewModel.clearRecipes()
+
+                override fun onQueryTextChange(searchPhase: String?): Boolean {
+                    searchPhase?.let { if (it.isEmpty()) viewModel.clearRecipes() }
                     return false
                 }
             })
@@ -73,6 +74,10 @@ class RecipesFragment @Inject constructor() : BaseFragment() {
 
         adapter.setOnViewClickListener<Recipe> { _, recipe ->
             Log.e(TAG, recipe.label ?: "!!NO LABEL!!")
+
+            navController.navigate(
+                RecipesFragmentDirections.actionRecipesFragmentToRecipeFragment(recipe)
+            )
         }
         recyclerView.adapter = adapter
     }
@@ -88,6 +93,8 @@ class RecipesFragment @Inject constructor() : BaseFragment() {
                         adapter.setData(it)
                     } ?: run {
                         Log.e(TAG, "Recipes Event: missing result")
+
+                        //TODO: Show error in Alert
                     }
                 }
 
@@ -95,6 +102,8 @@ class RecipesFragment @Inject constructor() : BaseFragment() {
                 Status.ERROR -> {
                     dismissDialog()
                     Log.e(TAG, "Recipes Event: Error - ${resource.exception?.message}")
+
+                    //TODO: Show error in Alert
                 }
 
                 Status.LOADING ->

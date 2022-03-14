@@ -4,6 +4,7 @@ buildscript {
     }
     dependencies {
         classpath Deps.hilt_android_gradle
+        classpath Deps.androidx_navigation_safe_args
     }
 }
 
