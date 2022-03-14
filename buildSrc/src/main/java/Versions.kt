@@ -7,6 +7,9 @@ object Versions {
     const val androidx_constraintLayout = "2.1.3"
     const val lifecycle_version = "2.4.1"
     const val androidx_navigation_safe_args = "2.4.1"
+    const val androidx_navigation = "2.4.1"
+    const val androidx_activity = "1.4.0"
+    const val androidx_fragment = "1.4.1"
     const val materialDesign = "1.5.0"
 
     // Dagger ilt

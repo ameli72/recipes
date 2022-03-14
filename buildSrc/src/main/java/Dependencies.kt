@@ -6,6 +6,12 @@ object Deps {
         "androidx.constraintlayout:constraintlayout:${Versions.androidx_constraintLayout}"
     val androidx_navigation_safe_args =
         "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidx_navigation_safe_args}"
+    const val androidx_navigation_fragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.androidx_navigation}"
+    const val androidx_navigation_ui =
+        "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
+    const val androidx_activity = "androidx.activity:activity-ktx:${Versions.androidx_activity}"
+    const val androidx_fragment = "androidx.fragment:fragment-ktx:${Versions.androidx_fragment}"
     val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
 
     // Lifecycle
@@ -15,6 +21,8 @@ object Deps {
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle_version}"
     const val androidx_lifecycle_viewmodel =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_version}"
+    const val androidx_lifecycle_common =
+        "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle_version}"
 
     // Dagger Hilt
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"

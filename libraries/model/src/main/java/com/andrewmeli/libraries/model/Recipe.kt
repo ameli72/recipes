@@ -35,4 +35,10 @@ data class Recipe(
 //totalNutrients (NutrientsInfo, optional),
 //totalDaily (NutrientsInfo, optional),
 //digest (Digest, optional)
-) : Parcelable
+) : Parcelable, IComparer {
+    override fun areItemsTheSame(compareTo: IComparer): Boolean =
+        uri == (compareTo as Recipe).uri
+
+    override fun areContentsTheSame(compareTo: IComparer): Boolean =
+        this == (compareTo as Recipe)
+}

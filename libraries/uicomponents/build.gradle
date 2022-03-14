@@ -3,15 +3,21 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+android {
+    buildFeatures {
+        viewBinding true
+    }
+}
+
 dependencies {
+    implementation project(':libraries:model')
+
     // Android
     implementation Deps.androidx_appCompat
     implementation Deps.androidx_core
     implementation Deps.androidx_constraintLayout
+    implementation Deps.androidx_activity
+    implementation Deps.androidx_fragment
     implementation Deps.materialDesign
-
-    // Testing
-    testImplementation Deps.junit
-    androidTestImplementation Deps.androidx_test_junit
-    androidTestImplementation Deps.androidx_test_espresso
+    implementation Deps.androidx_lifecycle_common
 }

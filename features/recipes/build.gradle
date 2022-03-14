@@ -5,14 +5,24 @@ plugins {
     id 'kotlin-kapt'
 }
 
+android {
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+
 dependencies {
     implementation project(':libraries:model')
     implementation project(':libraries:repository')
+    implementation project(':libraries:uicomponents')
 
     // Android
     implementation Deps.androidx_appCompat
     implementation Deps.androidx_core
     implementation Deps.androidx_constraintLayout
+    implementation Deps.androidx_navigation_fragment
+    implementation Deps.androidx_navigation_ui
     implementation Deps.materialDesign
 
     // Lifecycle
@@ -23,6 +33,9 @@ dependencies {
     // Dagger Hilt
     implementation Deps.dagger
     implementation Deps.legacy_support
+    implementation Deps.androidx_navigation_fragment
+    implementation Deps.androidx_navigation_ui
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt Deps.dagger_compiler
 
     // Hilt

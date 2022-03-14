@@ -7,5 +7,8 @@ import com.andrewmeli.libraries.repository.others.Resource
 
 
 interface IRecipesViewModel {
-    val githubProjects: LiveData<Event<Resource<List<Recipe>>>>
+    val recipes: LiveData<Event<Resource<List<Recipe>>>>
+
+    fun getRecipes(searchPhase: String)
+    fun clearRecipes()
 }
