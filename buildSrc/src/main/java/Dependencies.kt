@@ -1,10 +1,10 @@
 object Deps {
     // Android
-    val androidx_core = "androidx.core:core-ktx:${Versions.androidx_core}"
-    val androidx_appCompat = "androidx.appcompat:appcompat:${Versions.androidx_appCompat}"
-    val androidx_constraintLayout =
+    const val androidx_core = "androidx.core:core-ktx:${Versions.androidx_core}"
+    const val androidx_appCompat = "androidx.appcompat:appcompat:${Versions.androidx_appCompat}"
+    const val androidx_constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.androidx_constraintLayout}"
-    val androidx_navigation_safe_args =
+    const val androidx_navigation_safe_args =
         "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidx_navigation_safe_args}"
     const val androidx_navigation_fragment =
         "androidx.navigation:navigation-fragment-ktx:${Versions.androidx_navigation}"
@@ -12,7 +12,7 @@ object Deps {
         "androidx.navigation:navigation-ui-ktx:${Versions.androidx_navigation}"
     const val androidx_activity = "androidx.activity:activity-ktx:${Versions.androidx_activity}"
     const val androidx_fragment = "androidx.fragment:fragment-ktx:${Versions.androidx_fragment}"
-    val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
+    const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
 
     // Lifecycle
     const val androidx_lifecycle_livedata =
@@ -52,9 +52,12 @@ object Deps {
     const val coroutine_version_android =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutine_version}"
 
+    //picasso
+    const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+
     // Testing
-    val junit = "junit:junit:${Versions.jUnit}"
-    val androidx_test_junit = "androidx.test.ext:junit:${Versions.androidx_test_junit}"
-    val androidx_test_espresso =
+    const val junit = "junit:junit:${Versions.jUnit}"
+    const val androidx_test_junit = "androidx.test.ext:junit:${Versions.androidx_test_junit}"
+    const val androidx_test_espresso =
         "androidx.test.espresso:espresso-core:${Versions.androidx_test_espresso}"
 }

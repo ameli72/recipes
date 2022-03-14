@@ -5,9 +5,12 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="features/recipes/src/main/res/drawable/border.xml" value="0.5085" />
+        <entry key="features/recipes/src/main/res/drawable/imageviewborder.xml" value="0.5085" />
         <entry key="features/recipes/src/main/res/layout/activity_recipes.xml" value="0.14336372847011145" />
         <entry key="features/recipes/src/main/res/layout/fragment_recipe.xml" value="0.2947916666666667" />
         <entry key="features/recipes/src/main/res/layout/fragment_recipies.xml" value="0.55" />
+        <entry key="features/recipes/src/main/res/layout/layout_ingredient_item.xml" value="0.442481884057971" />
+        <entry key="features/recipes/src/main/res/layout/layout_ingredients_item.xml" value="0.442481884057971" />
         <entry key="features/recipes/src/main/res/layout/layout_recipe_item.xml" value="0.442481884057971" />
         <entry key="libraries/uicomponents/src/main/res/layout/layout_progress.xml" value="0.2947916666666667" />
       </map>

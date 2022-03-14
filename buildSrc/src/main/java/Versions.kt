@@ -27,6 +27,9 @@ object Versions {
     // Coroutines
     const val coroutine_version = "1.6.0"
 
+    //picasso
+    const val picasso = "2.8"
+
     // Testing
     const val jUnit = "4.13.2"
     const val androidx_test_junit = "1.1.3"

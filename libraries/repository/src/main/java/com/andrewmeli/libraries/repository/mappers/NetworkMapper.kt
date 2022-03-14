@@ -1,5 +1,6 @@
 package com.andrewmeli.libraries.repository.mappers
 
+import com.andrewmeli.libraries.model.Ingredient
 import com.andrewmeli.libraries.model.Recipe
 import com.andrewmeli.libraries.repository.network.responses.RecipeDTO
 import javax.inject.Inject
@@ -15,6 +16,7 @@ constructor() : IModelMapper<RecipeDTO, Recipe> {
             image = dto.image,
 
 //            images (Inline Model 1, optional),
+
             source = dto.source,
             url = dto.url,
             shareAs = dto.shareAs,
@@ -23,8 +25,10 @@ constructor() : IModelMapper<RecipeDTO, Recipe> {
 //            dietLabels (Array[string], optional),
 //            healthLabels (Array[string], optional),
 //            cautions (Array[string], optional),
-//            ingredientLines (Array[string], optional),
-//            ingredients (Array[Ingredient], optional),
+
+            ingredientLines = dto.ingredientLines?.map { Ingredient(it) },
+
+//            ingredients (Array[string], optional),
 
             calories = dto.calories,
             glycemicIndex = dto.glycemicIndex,
@@ -48,6 +52,7 @@ constructor() : IModelMapper<RecipeDTO, Recipe> {
             image = model.image,
 
 //            images (Inline Model 1, optional),
+
             source = model.source,
             url = model.url,
             shareAs = model.shareAs,
@@ -56,8 +61,10 @@ constructor() : IModelMapper<RecipeDTO, Recipe> {
 //            dietLabels (Array[string], optional),
 //            healthLabels (Array[string], optional),
 //            cautions (Array[string], optional),
-//            ingredientLines (Array[string], optional),
-//            ingredients (Array[Ingredient], optional),
+
+            ingredientLines = model.ingredientLines?.map { it.label ?: "" },
+
+//            ingredients (Array[string], optional),
 
             calories = model.calories,
             glycemicIndex = model.glycemicIndex,

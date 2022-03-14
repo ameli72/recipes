@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-data class RecipeDTO(
+data class IngredientDTO(
     @SerializedName("uri")
     @Expose
     var uri: String?,
@@ -38,11 +38,7 @@ data class RecipeDTO(
 //dietLabels (Array[string], optional),
 //healthLabels (Array[string], optional),
 //cautions (Array[string], optional),
-
-    @SerializedName("ingredientLines")
-    @Expose
-    var ingredientLines: List<String>?,
-
+//ingredientLines (Array[string], optional),
 //ingredients (Array[Ingredient], optional),
 
     @SerializedName("calories")

@@ -66,10 +66,6 @@ class RecipesFragment @Inject constructor() : BaseFragment() {
                     return false
                 }
             })
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                requestFocus()
-            }, 2000L)
         }
 
         adapter.setOnViewClickListener<Recipe> { _, recipe ->

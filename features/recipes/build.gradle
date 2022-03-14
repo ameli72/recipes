@@ -48,6 +48,9 @@ dependencies {
     implementation Deps.coroutine_version_core
     implementation Deps.coroutine_version_android
 
+    //Picasso
+    implementation Deps.picasso
+
     // Testing
     testImplementation Deps.junit
     androidTestImplementation Deps.androidx_test_junit

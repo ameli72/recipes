@@ -20,7 +20,9 @@ data class Recipe(
 //dietLabels (Array[string], optional),
 //healthLabels (Array[string], optional),
 //cautions (Array[string], optional),
-//ingredientLines (Array[string], optional),
+
+    var ingredientLines: List<Ingredient>?,
+
 //ingredients (Array[Ingredient], optional),
 
     var calories: Float?,

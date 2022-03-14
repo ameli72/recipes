@@ -7,4 +7,8 @@
 
     <color name="green_500">#32AB9E</color>
     <color name="green_700">#329378</color>
+
+    <color name="grey">#EEE</color>
+
+    <color name="link">#0000FF</color>
 </resources>
