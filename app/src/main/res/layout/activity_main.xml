@@ -10,7 +10,7 @@
         android:id="@+id/imageViewSplash"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
+        android:layout_margin="@dimen/_16sdp"
         android:contentDescription="@string/content_description"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"

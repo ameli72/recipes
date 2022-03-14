@@ -27,8 +27,11 @@ object Versions {
     // Coroutines
     const val coroutine_version = "1.6.0"
 
-    //picasso
+    // Picasso
     const val picasso = "2.8"
+
+    // GUI Scalability
+    val gui_scalability = "1.0.6"
 
     // Testing
     const val jUnit = "4.13.2"

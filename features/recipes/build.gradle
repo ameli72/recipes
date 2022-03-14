@@ -48,8 +48,13 @@ dependencies {
     implementation Deps.coroutine_version_core
     implementation Deps.coroutine_version_android
 
-    //Picasso
+    // Picasso
     implementation Deps.picasso
+
+    // GUI Scalability
+    implementation Deps.gui_scalability_density_independant_pixels
+    implementation Deps.gui_scalability_scale_independant_pixels
+
 
     // Testing
     testImplementation Deps.junit

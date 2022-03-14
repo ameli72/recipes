@@ -52,8 +52,13 @@ object Deps {
     const val coroutine_version_android =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutine_version}"
 
-    //picasso
+    //Picasso
     const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+
+    // GUI Scalability
+    val gui_scalability_density_independant_pixels = "com.intuit.sdp:sdp-android:${Versions.gui_scalability}"
+    val gui_scalability_scale_independant_pixels = "com.intuit.ssp:ssp-android:${Versions.gui_scalability}"
+
 
     // Testing
     const val junit = "junit:junit:${Versions.jUnit}"
