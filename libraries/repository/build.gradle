@@ -33,9 +33,4 @@ dependencies {
     // Coroutines
     implementation Deps.coroutine_version_core
     implementation Deps.coroutine_version_android
-
-    // Testing
-    testImplementation Deps.junit
-    androidTestImplementation Deps.androidx_test_junit
-    androidTestImplementation Deps.androidx_test_espresso
 }

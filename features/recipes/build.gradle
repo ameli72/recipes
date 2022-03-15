@@ -57,7 +57,12 @@ dependencies {
 
 
     // Testing
-    testImplementation Deps.junit
+    testImplementation Deps.androidx_test_junit_ktx
+    testImplementation Deps.androidx_test_core_ktx
+    testImplementation Deps.robolectric
+    testImplementation Deps.androidx_arch_core_testing
+
+
     androidTestImplementation Deps.androidx_test_junit
     androidTestImplementation Deps.androidx_test_espresso
 }

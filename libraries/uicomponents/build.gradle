@@ -24,5 +24,4 @@ dependencies {
     // GUI Scalability
     implementation Deps.gui_scalability_density_independant_pixels
     implementation Deps.gui_scalability_scale_independant_pixels
-
 }

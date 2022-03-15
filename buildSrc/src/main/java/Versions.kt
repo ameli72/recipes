@@ -31,10 +31,12 @@ object Versions {
     const val picasso = "2.8"
 
     // GUI Scalability
-    val gui_scalability = "1.0.6"
+    const val gui_scalability = "1.0.6"
 
     // Testing
-    const val jUnit = "4.13.2"
     const val androidx_test_junit = "1.1.3"
+    const val androidx_test_core_ktx = "1.4.0"
+    const val robolectric = "4.7.3"
+    const val androidx_arch_core_testing = "2.1.0"
     const val androidx_test_espresso = "3.4.0"
 }
