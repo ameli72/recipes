@@ -23,6 +23,7 @@ class RecipesViewModelTest {
 
     @Before
     fun setupViewModel() {
+        //TODO: this needs to be injected rather than hard coded!!
         viewModel = RecipesViewModel(FakeRepository())
     }
 

@@ -10,15 +10,10 @@ class App : Application() {
     companion object {
         var appInstance: App? = null
 
-        fun getInstance():App = synchronized(this) {
+        fun getInstance(): App = synchronized(this) {
             if (appInstance == null)
                 appInstance = App()
             return appInstance!!
         }
     }
-
-    override fun onCreate() {
-        super.onCreate()
-    }
-
 }

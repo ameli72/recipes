@@ -1,5 +1,6 @@
 package com.andrewmeli.libraries.repository.di
 
+import com.andrewmeli.libraries.repository.FakeRepository
 import com.andrewmeli.libraries.repository.IRepository
 import com.andrewmeli.libraries.repository.MainRepository
 import com.andrewmeli.libraries.repository.mappers.NetworkMapper
@@ -8,6 +9,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -21,4 +23,10 @@ object RepositoryModule {
         retrofit: IEdamamAPI,
         mapper: NetworkMapper
     ) = MainRepository(retrofit, mapper) as IRepository
+
+
+    @Singleton
+    @Provides
+    @Named("test_db")
+    fun providesFakeRepository() = FakeRepository() as IRepository
 }

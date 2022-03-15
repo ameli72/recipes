@@ -62,11 +62,14 @@ object Deps {
 
     // Testing
     const val androidx_test_junit_ktx = "androidx.test.ext:junit-ktx:${Versions.androidx_test_junit}"
-    const val androidx_test_core_ktx =  "androidx.test:core-ktx:${Versions.androidx_test_core_ktx}"
+    const val androidx_test_core_ktx =  "androidx.test:core-ktx:${Versions.androidx_test}"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
     const val androidx_arch_core_testing = "androidx.arch.core:core-testing:${Versions.androidx_arch_core_testing}"
 
+    const val androidx_test_runner = "androidx.test:runner:${Versions.androidx_test}"
+    const val androidx_test_espresso = "androidx.test.espresso:espresso-core:${Versions.androidx_test_espresso}"
+    const val androidx_test_rules = "androidx.test:rules:${Versions.androidx_test}"
+    const val androidx_test_ext = "androidx.test.ext:truth:${Versions.androidx_test}"
     const val androidx_test_junit = "androidx.test.ext:junit:${Versions.androidx_test_junit}"
-    const val androidx_test_espresso =
-        "androidx.test.espresso:espresso-core:${Versions.androidx_test_espresso}"
+
 }

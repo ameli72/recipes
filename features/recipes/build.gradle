@@ -31,12 +31,10 @@ dependencies {
     implementation Deps.androidx_lifecycle_runtime
     implementation Deps.androidx_lifecycle_viewmodel
 
+
     // Dagger Hilt
     implementation Deps.dagger
     implementation Deps.legacy_support
-    implementation Deps.androidx_navigation_fragment
-    implementation Deps.androidx_navigation_ui
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt Deps.dagger_compiler
 
     // Hilt
@@ -61,8 +59,4 @@ dependencies {
     testImplementation Deps.androidx_test_core_ktx
     testImplementation Deps.robolectric
     testImplementation Deps.androidx_arch_core_testing
-
-
-    androidTestImplementation Deps.androidx_test_junit
-    androidTestImplementation Deps.androidx_test_espresso
 }

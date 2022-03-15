@@ -35,7 +35,7 @@ object Versions {
 
     // Testing
     const val androidx_test_junit = "1.1.3"
-    const val androidx_test_core_ktx = "1.4.0"
+    const val androidx_test = "1.4.0"
     const val robolectric = "4.7.3"
     const val androidx_arch_core_testing = "2.1.0"
     const val androidx_test_espresso = "3.4.0"

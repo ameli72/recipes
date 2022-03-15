@@ -106,7 +106,10 @@ dependencies {
     testImplementation Deps.robolectric
     testImplementation Deps.androidx_arch_core_testing
 
-
-    androidTestImplementation Deps.androidx_test_junit
+    // Testing UI
+    androidTestImplementation Deps.androidx_test_runner
     androidTestImplementation Deps.androidx_test_espresso
+    androidTestImplementation Deps.androidx_test_rules
+    androidTestImplementation Deps.androidx_test_ext
+    androidTestImplementation Deps.androidx_test_junit
 }
