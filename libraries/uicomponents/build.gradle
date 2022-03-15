@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation project(':libraries:model')
+
+    // Android
+    implementation Deps.androidx_appCompat
+    implementation Deps.androidx_core
+    implementation Deps.androidx_constraintLayout
+    implementation Deps.androidx_activity
+    implementation Deps.androidx_fragment
+    implementation Deps.materialDesign
+    implementation Deps.androidx_lifecycle_common
+
+    // GUI Scalability
+    implementation Deps.gui_scalability_density_independant_pixels
+    implementation Deps.gui_scalability_scale_independant_pixels
+}

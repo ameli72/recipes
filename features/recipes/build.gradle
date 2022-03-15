@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+
+dependencies {
+    implementation project(':libraries:model')
+    implementation project(':libraries:repository')
+    implementation project(':libraries:uicomponents')
+
+    // Android
+    implementation Deps.androidx_appCompat
+    implementation Deps.androidx_core
+    implementation Deps.androidx_constraintLayout
+    implementation Deps.androidx_navigation_fragment
+    implementation Deps.androidx_navigation_ui
+    implementation Deps.materialDesign
+
+    // Lifecycle
+    implementation Deps.androidx_lifecycle_livedata
+    implementation Deps.androidx_lifecycle_runtime
+    implementation Deps.androidx_lifecycle_viewmodel
+
+
+    // Dagger Hilt
+    implementation Deps.dagger
+    implementation Deps.legacy_support
+    kapt Deps.dagger_compiler
+
+    // Hilt
+    implementation Deps.hilt_android
+    kapt Deps.hilt_android_compiler
+    kapt Deps.androidx_hilt_compiler
+
+    // Coroutines
+    implementation Deps.coroutine_version_core
+    implementation Deps.coroutine_version_android
+
+    // Picasso
+    implementation Deps.picasso
+
+    // GUI Scalability
+    implementation Deps.gui_scalability_density_independant_pixels
+    implementation Deps.gui_scalability_scale_independant_pixels
+
+
+    // Testing
+    testImplementation Deps.androidx_test_junit_ktx
+    testImplementation Deps.androidx_test_core_ktx
+    testImplementation Deps.robolectric
+    testImplementation Deps.androidx_arch_core_testing
+}

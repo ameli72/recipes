@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath Deps.hilt_android_gradle
+        classpath Deps.androidx_navigation_safe_args
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            android {
+                buildToolsVersion ConfigData.buildToolsVersion
+                compileSdkVersion ConfigData.compileSdkVersion
+
+                defaultConfig {
+                    minSdkVersion ConfigData.minSdkVersion
+                    targetSdkVersion ConfigData.targetSdkVersion
+                    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                compileOptions {
+                    sourceCompatibility ConfigData.javaVersion
+                    targetCompatibility ConfigData.javaVersion
+                }
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

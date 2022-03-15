@@ -1,0 +1,7 @@
+<resources>
+    <string name="search_phase">Enter Your Search Phase</string>
+    <string name="content_description">Recipe Image</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="url">URL</string>
+    <string name="close">Close</string>
+</resources>

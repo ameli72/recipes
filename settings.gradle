@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Recipes"
+include ':app'
+include ':features:recipes'
+include ':libraries:actions'
+include ':libraries:model'
+include ':libraries:repository'
+include ':libraries:uicomponents'
