@@ -1,5 +1,6 @@
 package com.andrewmeli.libraries.uicomponents
 
+import android.view.View
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,11 +12,12 @@ abstract class BaseListAdapter<T, V> :
 
     protected var list = listOf<T>()
 
-    protected var onViewClickListeners: (viewId: Int, data: Any?) -> Unit = { _, _ -> }
+    protected var onViewClickListeners: (data: Any, view: View) -> Unit = { _, _ -> }
 
-    fun <D> setOnViewClickListener(callback: (viewId: Int, data: D) -> Unit) {
-        onViewClickListeners = { viewId, any ->
-            callback(viewId, any as D)
+    @Suppress("UNCHECKED_CAST")
+    fun <D> setOnViewClickListener(callback: (data: D, view: View) -> Unit) {
+        onViewClickListeners = { data, view ->
+            callback(data as D, view)
         }
     }
 

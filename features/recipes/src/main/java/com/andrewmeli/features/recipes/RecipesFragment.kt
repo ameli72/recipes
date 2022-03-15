@@ -1,13 +1,12 @@
 package com.andrewmeli.features.recipes
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.andrewmeli.features.recipes.databinding.FragmentRecipiesBinding
 import com.andrewmeli.features.recipes.di.IRecipesViewModel
@@ -68,11 +67,12 @@ class RecipesFragment @Inject constructor() : BaseFragment() {
             })
         }
 
-        adapter.setOnViewClickListener<Recipe> { _, recipe ->
+        adapter.setOnViewClickListener<Recipe> { recipe, imageView ->
             Log.e(TAG, recipe.label ?: "!!NO LABEL!!")
 
+            val extras = FragmentNavigatorExtras(imageView to recipe.uri.toString())
             navController.navigate(
-                RecipesFragmentDirections.actionRecipesFragmentToRecipeFragment(recipe)
+                RecipesFragmentDirections.actionRecipesFragmentToRecipeFragment(recipe), extras
             )
         }
         recyclerView.adapter = adapter

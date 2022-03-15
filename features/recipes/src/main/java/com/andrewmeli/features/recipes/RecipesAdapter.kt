@@ -33,17 +33,20 @@ class RecipesAdapter : BaseListAdapter<Recipe, RecipesAdapter.ViewHolder>() {
 
         fun bind(recipe: Recipe) {
             binding.apply {
-                Picasso.get()
-                    .load(recipe.image)
-                    .placeholder(R.drawable.loading)
-                    .error(R.drawable.error)
-                    .into(imageView)
+                imageView.apply {
+                    transitionName = recipe.uri.toString()
+                    Picasso.get()
+                        .load(recipe.image)
+                        .placeholder(R.drawable.loading)
+                        .error(R.drawable.error)
+                        .into(this)
+                }
 
                 textViewName.text = recipe.label
                 textViewCuisineType.text = recipe.cuisineType?.joinToString { it.label ?: "" }
 
                 container.onSingleClickListener {
-                    onViewClickListeners.invoke(it.id, recipe)
+                    onViewClickListeners.invoke(recipe, imageView)
                 }
             }
         }

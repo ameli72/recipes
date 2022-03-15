@@ -3,6 +3,7 @@ package com.andrewmeli.features.recipes
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,12 @@ class RecipeFragment @Inject constructor() : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? = inflater.inflate(R.layout.fragment_recipe, container, false)
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedElementEnterTransition =
+            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -43,11 +50,14 @@ class RecipeFragment @Inject constructor() : BaseFragment() {
     private fun initViews(recipe: Recipe) = binding.apply {
 
         textViewTitle.text = recipe.label
-        Picasso.get()
-            .load(recipe.image)
-            .placeholder(R.drawable.loading)
-            .error(R.drawable.error)
-            .into(imageView)
+        imageView.apply {
+            transitionName = recipe.uri.toString()
+            Picasso.get()
+                .load(recipe.image)
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.error)
+                .into(this)
+        }
 
         adapter.setData(recipe.ingredientLines)
         recyclerView.adapter = adapter

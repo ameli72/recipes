@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".RecipeFragment">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
         android:layout_width="@dimen/_160sdp"
         android:layout_height="@dimen/_160sdp"
